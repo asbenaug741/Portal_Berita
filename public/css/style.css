@@ -1,0 +1,229 @@
+
+/* ==================================================== style all ==============================================*/
+body {
+  background-color: rgb(253, 249, 249);
+}
+
+
+.content {
+  background-color: #fff;
+  
+}
+
+.container{
+  margin: 0 auto;
+}
+
+
+/*================================================== end of style all =============================================*/
+
+/*=================================================== style homepage =============================================*/
+
+.garis {
+  width: 100%;
+  height: 2em;
+  background-color: #afd1fa;
+  opacity: 0.8;
+}
+
+.container.sidebar {
+  float: right;
+  background-color: aqua;
+}
+
+.sidebar .news {
+  background-color: #fff;
+}
+
+.news ul li{
+  list-style-type: none;
+}
+
+.buku{
+  height: 45rem;
+  background-color: white;
+}
+
+.scroll{
+  max-height: 42rem;
+  border: 1px solid white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space:nowrap;
+}
+
+.scroll .item{
+  display: inline-block;
+  height: 30rem;
+  margin: 10px 10px 10px 0px;
+  font-size: 20px;
+  white-space: normal;
+}
+
+.scroll .card{
+  border: none;
+}
+
+.scroll::-webkit-scrollbar{
+  height: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb{
+  background-color:#c4c4c4;
+  border-radius: 5px;
+}
+
+hr{
+  color: #afd1fa;
+}
+
+
+/*================================================= end of style homepage ====================================*/
+
+
+/* =================================================== style news ============================================ */
+
+.newsmain{
+  width: 93%;
+  max-height: 32rem;
+  border: 1px solid #afd1fa;
+  border-radius: 0px 0px 20px 20px;
+}
+.newsnow{
+  max-height: 19rem;
+  border: 1px solid white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space:nowrap;
+}
+.newsnow .item{
+  height: 35rem;
+  display: inline-block;
+  margin: 10px 10px 10px 0px;
+  font-size: 11px;
+  white-space: normal;
+}
+.newsnow .card{
+  border: none;
+}
+
+.newsnow::-webkit-scrollbar{
+  height: 10px;
+}
+.newsnow::-webkit-scrollbar-thumb{
+  background-color:#c4c4c4;
+  border-radius: 5px;
+}
+/* ===============================================end of style news ========================================== */
+/* =========================================style detail buku======================================== */
+.close{
+  flex: 1;
+  justify-content: center;
+}
+
+.rincian_{
+  border: 1px solid #57a4ff;
+}
+
+.author{
+  width: 150px;
+  height: 150px;
+  border: 0px solid;
+  border-radius:50%;
+}
+/* ========================================= end of style detail buku ======================================== */
+/* ======================================================== detail news ======================================== */
+.iklan2 img{
+  width:100%;
+  height: 100px;
+}
+
+.newsutama{
+  font-family: verdana;
+  text-align: justify;
+}
+.newsutama h3 .judulberita{
+  font-size: 48pt;
+}
+.newsutama hr{
+  color: #000;
+  width: 100%;
+  
+}
+.newsutamma hr .kotak{
+  height: 50px;
+  color: #afd1fa;
+}
+
+.berita{
+  width: 800px;
+  height: 400px;
+}
+
+.scrollbar{
+  max-height: 19rem;
+  border: 1px solid white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space:nowrap;
+}
+
+.scrollbar .item{
+  display: inline-block;
+  margin: 10px 30px 10px 0px;
+  font-size: 11px;
+  white-space: normal;
+}
+
+.scrollbar::-webkit-scrollbar{
+  height: 10px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+  background-color:#c4c4c4;
+  border-radius: 5px;
+}
+
+.scrollbar .card{
+  border: none;
+}
+
+.center{
+  margin: 0 auto;
+}
+/* ===================================== end of detail news ========================== */
+/* =========================================== Buletin ============================ */
+.buletin-list .card{
+  height: 21em;
+  background: none;
+  border: none;
+  margin-right: 20px;
+  width: 11em;
+}
+
+.buletin-list{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ======================= Login ======================= */
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  border: 1px solid #57A4FF;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.back-home {
+  padding: 20px;
+  text-decoration: none;
+}
+
+.failed{
+  width: 700px;
+  margin: 0 auto;
+}
