@@ -4,17 +4,17 @@
         <div class="row">
             <div class="col-lg-3 mb-3 p-2 flex-fill bd-highlight">
                 <ul class="list-unstyled text-muted">
-                    <li><img src="logo/logo3.png" height="70em"></li>
-                    <li class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, eius? Sunt maxime voluptas inventore alias labore sapiente! Error, eum quis!</li>
+                    <li><img src="{{ asset('logo/logo3.png') }}" height="70em"></li>
+                    <li class="mb-2">Melayani dan prasarana ilmu dan kearsipan masyarakat Kabupaten Semarang</li>
                 </ul>
             </div>
             <div class="col-6 col-lg-2 offset-lg-1 mb-3 p-2 flex-fill bd-highlight">
                 <h5>Links</h5>
                 <ul class="list-unstyled tag-nav">
-                    <li class="mb-2"><a href="/">Home</a></li>
-                    <li class="mb-2"><a href="/news">Berita</a></li>
-                    <li class="mb-2"><a href="/buletin">Buletin</a></li>
-                    <li class="mb-2"><a href="/login">Login</a></li>
+                    <li class="nostrip mb-2"><a href="/">Home</a></li>
+                    <li class="nostrip mb-2"><a href="/news">Berita</a></li>
+                    <li class="nostrip mb-2"><a href="/buletin">Buletin</a></li>
+                    <li class="nostrip mb-2"><a href="/login">Login</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 mb-3 p-2 flex-fill bd-highlight">

@@ -96,3 +96,22 @@ body {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+
+.big-icon{
+  font-size: 60px;
+}
+
+.numbers{
+  font-size: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:active{
+  color: white;
+  background-color: #2470dc;
+  border-radius: 5px;
+}

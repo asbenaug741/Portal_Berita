@@ -1,7 +1,7 @@
 
 /* ==================================================== style all ==============================================*/
 body {
-  background-color: rgb(253, 249, 249);
+  background-color: rgb(249, 244, 244);
 }
 
 
@@ -10,11 +10,26 @@ body {
   
 }
 
+.gambar{
+  max-height: 350px;
+  max-width: 350px;
+  overflow: hidden;
+}
+
 .container{
   margin: 0 auto;
 }
 
 
+
+.nostrip a{
+  color: #000;
+  text-decoration: none;
+}
+
+.justify{
+  text-align: justify;
+}
 /*================================================== end of style all =============================================*/
 
 /*=================================================== style homepage =============================================*/
@@ -31,16 +46,24 @@ body {
   background-color: aqua;
 }
 
-.sidebar .news {
-  background-color: #fff;
+
+
+.news ul{
+  margin-left: -30px;
 }
 
 .news ul li{
   list-style-type: none;
+  border: none;
+}
+
+.news ul li .card{
+  border: none;
+  background-color: #fff;
 }
 
 .buku{
-  height: 45rem;
+  max-height: 30rem;
   background-color: white;
 }
 
@@ -54,10 +77,12 @@ body {
 
 .scroll .item{
   display: inline-block;
-  height: 30rem;
+  height: 20rem;
   margin: 10px 10px 10px 0px;
   font-size: 20px;
   white-space: normal;
+  overflow-x:hidden;
+  overflow-y:auto;
 }
 
 .scroll .card{
@@ -76,6 +101,11 @@ body {
 hr{
   color: #afd1fa;
 }
+
+.size{
+  font-size: 10px;
+}
+
 
 
 /*================================================= end of style homepage ====================================*/
@@ -114,6 +144,8 @@ hr{
   background-color:#c4c4c4;
   border-radius: 5px;
 }
+
+
 /* ===============================================end of style news ========================================== */
 /* =========================================style detail buku======================================== */
 .close{
@@ -156,8 +188,8 @@ hr{
 }
 
 .berita{
-  width: 800px;
-  height: 400px;
+  max-height: 350px;
+  overflow: hidden;
 }
 
 .scrollbar{
@@ -194,10 +226,9 @@ hr{
 /* =========================================== Buletin ============================ */
 .buletin-list .card{
   height: 21em;
-  background: none;
   border: none;
-  margin-right: 20px;
-  width: 11em;
+  margin-right: 120px;
+  width: 9em;
 }
 
 .buletin-list{
@@ -205,7 +236,18 @@ hr{
   display: flex;
   justify-content: center;
 }
+/* ==================== end of buletn ================*/
+/* ===================== detail buletin ============*/
+.download{
+  background-color: #fff;
+}
 
+.down{
+  line-height: 100%;
+}
+
+
+/* =================== end of detail buletin ================*/
 /* ======================= Login ======================= */
 .login {
   position: absolute;

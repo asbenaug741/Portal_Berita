@@ -2,135 +2,18 @@
 
 @section('container')
 <!-- content -->
-<div class="buletin-list row">
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
+<div class=" pt-4 buletin-list row">
+  @foreach($buletin as $key)
+  <div class="col-2 nostrip">
+    <a href="detail_buletin/{{ $key->id }}">
+    <div class="content card rounded shadow-md"style="max-height:400px">
+      <img src="{{ asset('storage/'.$key->sampul) }}" class=" img-thumbnail shadow mb-2 bg-body rounded">
+      <h5 class="card-title text-center " style="font-size:18px;">{{ $key->judul }}</h5>
+      <p class="card-text p-2"><small class="text-muted"> Edisi: {{ $key->edisi }}</small></p>
     </div>
+    </a>
   </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-</div>
-<div class="buletin-list row">
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-</div>
-<div class="buletin-list row">
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-</div>
-<div class="buletin-list row">
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-</div>
-<div class="buletin-list row">
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
-  <div class="col-2">
-    <div class="card">
-      <img src="../img/buletin.png" class=" img-thumbnail shadow mb-2 bg-body rounded">
-      <h5 class="card-title text-center">sadasd</h5>
-    </div>
-  </div>
+  @endforeach
 </div>
 <!-- end of content -->
 @endsection

@@ -37,35 +37,14 @@
     </div>
 </nav>
 <body>
-    <div class="failed mt-3">
-
-        @if(session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }}
-                <button type="button" class="btn-close" data-b5-dismiss="alert" aria-label="Close">
-                </button>
-            </div>
-        @endif
-
-        @if(session()->has('loginError'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                {{ session('loginError') }}
-                
-            </div>
-        @endif
-
-    </div>
     <div class="login">
-        <a href="/" class="back-home"><span class="fa-solid fa-circle-left"></span>Kembali ke Halaman Utama</a>
-        <a style="text-decoration: none;
-        color: #000" href="/home">
-            <h1 class="text-center mt-5">LOGIN</h1>
-        </a>
+        <h1 class="text-center mt-5">LOGIN</h1>
+
         <form action='/login' method='post'>
             @csrf
             <div class="mb-3 mx-5">
                 <label for="username">Username</label>
-                <input type="username" name="username" class="form-control @error('username') is-invalid @enderror" id="exampleInputUsername1" placeholder="username" autofocus required>
+                <input type="username" name="username" class="form-control @error('username') is-invalid @enderror" id="exampleInputUsername1" placeholder="username" autocomplete="off">
                 @error('username')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -74,11 +53,30 @@
             </div>
             <div class="mb-3 mx-5">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password" required>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password" autocomplete="off">
+                @error('password')
+                <p class="text-danger">{{$message}}</p>
+                @enderror
             </div>
             <button type=" submit" class="btn btn-dark ms-5 mb-5" style="background-color:#57A4FF; border: 1px solid #57A4FF">Submit</button>
         </form>
-        <small>Not register? <a href="/register">register now</a></small>
+
+        <div class="failed mt-3">
+            @if(session()->has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-b5-dismiss="alert" aria-label="Close">
+                    </button>
+                </div>
+            @endif
+    
+            @if(session()->has('loginError'))
+                <div class="alert alert-danger alert-dismissible fade show text-center col-lg" role="alert">
+                    {{ session('loginError') }}
+                    
+                </div>
+            @endif
+        </div>
     </div>
 
 </body>

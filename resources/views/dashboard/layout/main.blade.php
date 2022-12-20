@@ -22,6 +22,17 @@
     
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
+
+    <!-- Style from trix editor -->
+    <link rel="stylesheet" href="/css/trix.css">
+    <script src="/js/trix.js"></script>
+
+    <style>
+      trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
+      }
+    </style>
+
   </head>
   <body>
     

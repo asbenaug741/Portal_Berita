@@ -4,59 +4,51 @@
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Event</h1>
-    <div class="btn-toolbar mb-2 mb-md-0">
-      <div class="btn-group me-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-      </div>
-      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-        <span data-feather="calendar" class="align-text-bottom"></span>
-        This week
-      </button>
-    </div>
-  </div>
+</div>
 
-    <div class="table-responsive mt-5">
-    <table class="table table-striped table-sm">
+@if(session()->has('success'))
+    <div class="alert alert-success" role="alert">
+        {{ session('success') }}
+    </div>
+@endif
+
+{{-- Membuat postingan --}}
+<a class="btn btn-primary" href="/dashboard/event/create" >+ Tambah</a>
+
+<div class="table-responsive mt-5">
+    <table class="table table-striped" width="600px">
         <thead>
-        <tr>
-            <th scope="col">No</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Deskripsi</th>
-            <th scope="col">Tanggal</th>
-            <th scope="col">Foto</th>
-            <th scope="col">Update</th>
-        </tr>
+            <tr>
+                {{-- <th scope="col">No</th> --}}
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">Aksi</th>
+            </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>1,001</td>
-            <td>random</td>
-            <td>data</td>
-            <td>placeholder</td>
-            <td>text</td>
-            <td>
-                <div class="s">
-                    <button>Edit</button>
-                    <button>Hapus</button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>1,002</td>
-            <td>placeholder</td>
-            <td>irrelevant</td>
-            <td>visual</td>
-            <td>layout</td>
-            <td>
-                <div class="s">
-                    <button>Edit</button>
-                    <button>Hapus</button>
-                </div>
-            </td>
-        </tr>
+        @foreach($events as $key=>$value)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $value->nama_event }}</td>
+                <td>{{ $value->tanggal_event }}</td>
+                <td><img src="{{ asset('storage/'.$value->gambar) }}" width="50px"></td>
+                <td>
+                    <div class="s">
+                        <a href="/detail_event/{{ $value->id }}" class="btn btn-info"><i class="bi bi-eye"></i></a>
+                        <a href="/dashboard/event/{{ $value->id }}/edit" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+                        <form action="/dashboard/event/{{ $value->id }}" method="POST" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus ini?')"><i class="bi bi-trash"></i></button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
-    </div>
+</div>
 
 @endsection
